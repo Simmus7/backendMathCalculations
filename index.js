@@ -16,6 +16,7 @@ app.use(bodyparser.urlencoded({ extended: true }));
 app.use(bodyparser.json());
 app.use(cors({ origin: true }));
 
+console.log("heelllo")
 
 //Routes
 app.use("/fibonacci", require("./src/routes/fibonacciRoute"));
