@@ -2,7 +2,7 @@ const { Router } = require("express");
 const route = Router();
 const factorialController = require("../controllers/factorialController");
 
-route.get("/", factorialController.factorial);
+route.post("/", factorialController.factorial);
 
 
 module.exports = route;

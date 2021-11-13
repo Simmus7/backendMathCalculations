@@ -2,7 +2,7 @@ const { Router } = require("express");
 const route = Router();
 const circleController = require("../controllers/circleController");
 
-route.get("/", circleController.circleAreaAndPerimeter);
+route.post("/", circleController.circleAreaAndPerimeter);
 
 
 module.exports = route;

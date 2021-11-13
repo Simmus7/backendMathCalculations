@@ -1,9 +1,10 @@
 const fibonacciController = {};
 
 fibonacciController.fibonacci = (req, res) => {
-    let { n } = req.body;
+    const n = req.body.n;
+    console.log(n)
     if (isNaN(n) || n <= 0){
-        res.json("Por favor ingrese un número válido")
+        res.json("Please enter a valid number")
     }
     else {
         var toReturn = {

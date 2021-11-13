@@ -2,7 +2,7 @@ const { Router } = require("express");
 const route = Router();
 const rectangleController = require("../controllers/rectangleController");
 
-route.get("/", rectangleController.rectangleAreaAndPerimeter);
+route.post("/", rectangleController.rectangleAreaAndPerimeter);
 
 
 module.exports = route;
