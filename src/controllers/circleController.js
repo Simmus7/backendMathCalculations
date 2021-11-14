@@ -2,8 +2,8 @@ const circleController = {};
 
 circleController.circleAreaAndPerimeter = (req, res) => {
     let { radio } = req.body;
-    if (isNaN(radio) || radio < 0){
-        res.json("Por favor ingrese un valor para el radio válido")
+    if (isNaN(radio) || radio < 0 || radio > 2000000000){
+        res.json("Unvalid numbers")
     }
     else {
         var values = calculate(radio)

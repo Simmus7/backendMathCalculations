@@ -2,9 +2,8 @@ const fibonacciController = {};
 
 fibonacciController.fibonacci = (req, res) => {
     const n = req.body.n;
-    console.log(n)
-    if (isNaN(n) || n <= 0 || n > 1500){
-        res.json("Please enter a valid number between 1 and 1500")
+    if (isNaN(n) || n <= 0 || n > 1500 || n%1 != 0){
+        res.json("Unvalid numbers")
     }
     else {
         var toReturn = {
@@ -23,6 +22,7 @@ function fibonacciSequence (number) {
         n1 = n2;
         n2 = nextTerm;
     }
+    //console.log(sequence)
 
     return sequence;
 }
