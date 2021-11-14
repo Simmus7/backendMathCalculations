@@ -4,7 +4,7 @@ fibonacciController.fibonacci = (req, res) => {
     const n = req.body.n;
     console.log(n)
     if (isNaN(n) || n <= 0 || n > 1500 || n%1 != 0){
-        res.json("Please enter a valid number (between 1 and 1500)")
+        res.json("Unvalid numbers")
     }
     else {
         var toReturn = {

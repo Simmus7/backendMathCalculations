@@ -3,7 +3,7 @@ const factorialController = {};
 factorialController.factorial = (req, res) => {
     let { n } = req.body;
 if (isNaN(n) || n <= 0 || n> 170 || n%1 != 0){
-        res.json("Por favor ingrese un número válido")
+    res.json("Unvalid numbers")
     }
     else {
         var toReturn = {
