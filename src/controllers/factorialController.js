@@ -2,7 +2,7 @@ const factorialController = {};
 
 factorialController.factorial = (req, res) => {
     let { n } = req.body;
-    if (isNaN(n) || n <= 0 || n>170){
+if (isNaN(n) || n <= 0 || n> 170 || n%1 != 0){
         res.json("Por favor ingrese un número válido")
     }
     else {
@@ -17,6 +17,7 @@ function factorial (n) {
 	for (i=1; i<=n; i++) {
 		total = total * i; 
 	}
+    console.log(total)
 	return total; 
 }
 
