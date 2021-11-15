@@ -2,23 +2,22 @@ const factorialController = {};
 
 factorialController.factorial = (req, res) => {
     let { n } = req.body;
-if (isNaN(n) || n <= 0 || n> 170 || n%1 != 0){
+    if (isNaN(n) || n < 0 || n> 20000 || n%1 != 0){
     res.json("Unvalid numbers")
     }
     else {
         var toReturn = {
-            n : factorial(n)
+            n : factorial(n).toString()
         }
         res.json(toReturn)
     }
 }
+const lut = [1n, 1n];
 function factorial (n) {
-	var total = 1; 
-	for (i=1; i<=n; i++) {
-		total = total * i; 
-	}
-    console.log(total)
-	return total; 
-}
+    for (let i = lut.length; i <= n; i++) {
+      lut.push(BigInt(i) * lut[i - 1]);
+    }
+    return lut[n];
+  };
 
 module.exports = factorialController;
